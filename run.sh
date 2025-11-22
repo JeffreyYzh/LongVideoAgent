@@ -1,0 +1,1 @@
+python main.py | tee output2.log
