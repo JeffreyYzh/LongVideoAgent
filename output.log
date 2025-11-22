@@ -1,0 +1,128 @@
+[TOOL_CALL] refine_prompts
+{"prompt": "A dog happily runs to a man.", "is_global": true}[ANSWER]
+A medium-sized dog with a joyful expression sprints across a grassy field toward a man standing with outstretched arms, capturing the bond between human and animal in a vivid, heartwarming scene. The setting is outdoors during a sunny afternoon, with soft lighting enhancing the emotional connection. Include dynamic motion in the dog’s posture and a sense of anticipation in the man’s body language. Render the image in a realistic style with attention to natural details like fur texture, grass movement, and warm tones reflecting the sunlight.
+[TOOL_RESPONSE] refine_prompts
+{
+    "refine_prompts": "A medium-sized dog with a joyful expression sprints across a grassy field toward a man standing with outstretched arms, capturing the bond between human and animal in a vivid, heartwarming scene. The setting is outdoors during a sunny afternoon, with soft lighting enhancing the emotional connection. Include dynamic motion in the dog’s posture and a sense of anticipation in the man’s body language. Render the image in a realistic style with attention to natural details like fur texture, grass movement, and warm tones reflecting the sunlight."
+}
+[TOOL_CALL] generate_t2v
+{"prompt": "A medium-sized dog with a joyful expression sprints across a grassy field toward a man standing with outstretched arms, capturing the bond between human and animal in a vivid, heartwarming scene. The setting is outdoors during a sunny afternoon, with soft lighting enhancing the emotional connection. Include dynamic motion in the dog’s posture and a sense of anticipation in the man’s body language. Render the image in a realistic style with attention to natural details like fur texture, grass movement, and warm tones reflecting the sunlight."}[2025-11-22 16:42:58,451] INFO: offload_model is not specified, set to True.
+[2025-11-22 16:42:58,451] INFO: Generation job args: Namespace(task='t2v-1.3B', size='832*480', frame_num=81, ckpt_dir='./Wan2.1-T2V-1.3B', offload_model=True, ulysses_size=1, ring_size=1, t5_fsdp=False, t5_cpu=True, dit_fsdp=False, save_file='./sample/global.mp4', src_video=None, src_mask=None, src_ref_images=None, prompt='A medium-sized dog with a joyful expression sprints across a grassy field toward a man standing with outstretched arms, capturing the bond between human and animal in a vivid, heartwarming scene. The setting is outdoors during a sunny afternoon, with soft lighting enhancing the emotional connection. Include dynamic motion in the dog’s posture and a sense of anticipation in the man’s body language. Render the image in a realistic style with attention to natural details like fur texture, grass movement, and warm tones reflecting the sunlight.', use_prompt_extend=False, prompt_extend_method='local_qwen', prompt_extend_model=None, prompt_extend_target_lang='zh', base_seed=2154838413765297346, image=None, first_frame=None, last_frame=None, sample_solver='unipc', sample_steps=50, sample_shift=8, sample_guide_scale=6)
+[2025-11-22 16:42:58,452] INFO: Generation model config: {'__name__': 'Config: Wan T2V 1.3B', 't5_model': 'umt5_xxl', 't5_dtype': torch.bfloat16, 'text_len': 512, 'param_dtype': torch.bfloat16, 'num_train_timesteps': 1000, 'sample_fps': 16, 'sample_neg_prompt': '色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走', 't5_checkpoint': 'models_t5_umt5-xxl-enc-bf16.pth', 't5_tokenizer': 'google/umt5-xxl', 'vae_checkpoint': 'Wan2.1_VAE.pth', 'vae_stride': (4, 8, 8), 'patch_size': (1, 2, 2), 'dim': 1536, 'ffn_dim': 8960, 'freq_dim': 256, 'num_heads': 12, 'num_layers': 30, 'window_size': (-1, -1), 'qk_norm': True, 'cross_attn_norm': True, 'eps': 1e-06}
+[2025-11-22 16:42:58,452] INFO: Input prompt: A medium-sized dog with a joyful expression sprints across a grassy field toward a man standing with outstretched arms, capturing the bond between human and animal in a vivid, heartwarming scene. The setting is outdoors during a sunny afternoon, with soft lighting enhancing the emotional connection. Include dynamic motion in the dog’s posture and a sense of anticipation in the man’s body language. Render the image in a realistic style with attention to natural details like fur texture, grass movement, and warm tones reflecting the sunlight.
+[2025-11-22 16:42:58,452] INFO: Creating WanT2V pipeline.
+[2025-11-22 16:44:08,765] INFO: loading ./Wan2.1-T2V-1.3B/models_t5_umt5-xxl-enc-bf16.pth
+[2025-11-22 16:44:31,187] INFO: loading ./Wan2.1-T2V-1.3B/Wan2.1_VAE.pth
+[2025-11-22 16:44:31,942] INFO: Creating WanModel from ./Wan2.1-T2V-1.3B
+[2025-11-22 16:44:51,838] INFO: Generating video ...
+[2025-11-22 16:50:22,162] INFO: Saving generated video to ./sample/global.mp4
+[2025-11-22 16:50:23,557] INFO: Finished.
+
+[TOOL_RESPONSE] generate_t2v
+{
+    "save_file": "./sample/global.mp4"
+}[2025-11-22 16:50:24,659] INFO: ALL tokens: 303, Available tokens: 57333
+
+[TOOL_CALL] calculate_frame_index
+{"video_length": 10}
+[TOOL_RESPONSE] calculate_frame_index
+{
+    "num_segments": 2,
+    "frame_indexs": [
+        0,
+        40,
+        80
+    ]
+}[2025-11-22 16:50:28,127] INFO: ALL tokens: 356, Available tokens: 57333
+
+[TOOL_CALL] refine_prompts
+{"prompt": "A medium-sized dog with a joyful expression sprints across a grassy field toward a man standing with outstretched arms, capturing the bond between human and animal in a vivid, heartwarming scene. The setting is outdoors during a sunny afternoon, with soft lighting enhancing the emotional connection. Include dynamic motion in the dog’s posture and a sense of anticipation in the man’s body language. Render the image in a realistic style with attention to natural details like fur texture, grass movement, and warm tones reflecting the sunlight.", "is_global": false, "number": 2}[2025-11-22 16:50:34,309] INFO: ALL tokens: 116, Available tokens: 57825
+[ANSWER]
+["A medium-sized dog with a joyful expression runs across a grassy field on a sunny afternoon. Focus on the dynamic motion of the dog’s posture, capturing its energetic sprint with meticulous attention to fur texture and natural details. The scene is illuminated by soft lighting, enhancing the warm tones reflecting sunlight and creating a vivid, lifelike image.", "A man stands in a grassy outdoor setting during a sunny afternoon, his arms outstretched toward a sprinting dog. Emphasize the emotional connection between human and animal through the man’s anticipatory body language and the dog’s enthusiastic approach. Render the moment in a realistic style, highlighting intricate details like grass movement, sunlight effects, and the bond shared between them."]
+[TOOL_RESPONSE] refine_prompts
+{
+    "refine_prompts": "[\"A medium-sized dog with a joyful expression runs across a grassy field on a sunny afternoon. Focus on the dynamic motion of the dog’s posture, capturing its energetic sprint with meticulous attention to fur texture and natural details. The scene is illuminated by soft lighting, enhancing the warm tones reflecting sunlight and creating a vivid, lifelike image.\", \"A man stands in a grassy outdoor setting during a sunny afternoon, his arms outstretched toward a sprinting dog. Emphasize the emotional connection between human and animal through the man’s anticipatory body language and the dog’s enthusiastic approach. Render the moment in a realistic style, highlighting intricate details like grass movement, sunlight effects, and the bond shared between them.\"]"
+}[2025-11-22 16:50:41,762] INFO: ALL tokens: 647, Available tokens: 57333
+
+[TOOL_CALL] extract_frames_by_index
+{"video_path": "./sample/global.mp4", "frame_indices": [0, 40, 80]}Saved to ./sample/0.png
+Saved to ./sample/40.png
+Saved to ./sample/80.png
+
+[TOOL_RESPONSE] extract_frames_by_index
+{
+    "save_path_list": [
+        "./sample/0.png",
+        "./sample/40.png",
+        "./sample/80.png"
+    ]
+}[2025-11-22 16:50:45,234] INFO: ALL tokens: 719, Available tokens: 57333
+
+[TOOL_CALL] generate_flf2v
+{"prompts": ["A medium-sized dog with a joyful expression runs across a grassy field on a sunny afternoon. Focus on the dynamic motion of the dog’s posture, capturing its energetic sprint with meticulous attention to fur texture and natural details. The scene is illuminated by soft lighting, enhancing the warm tones reflecting sunlight and creating a vivid, lifelike image.", "A man stands in a grassy outdoor setting during a sunny afternoon, his arms outstretched toward a sprinting dog. Emphasize the emotional connection between human and animal through the man’s anticipatory body language and the dog’s enthusiastic approach. Render the moment in a realistic style, highlighting intricate details like grass movement, sunlight effects, and the bond shared between them."], "first_frames": ["./sample/0.png", "./sample/40.png"], "last_frames": ["./sample/40.png", "./sample/80.png"]}[2025-11-22 16:50:55,216] INFO: offload_model is not specified, set to True.
+[2025-11-22 16:50:55,216] INFO: Generation job args: Namespace(task='flf2v-14B', size='1280*720', frame_num=81, ckpt_dir='./Wan2.1-FLF2V-14B-720P', offload_model=True, ulysses_size=1, ring_size=1, t5_fsdp=False, t5_cpu=True, dit_fsdp=False, save_file='./sample/global.mp4', src_video=None, src_mask=None, src_ref_images=None, prompt='A medium-sized dog with a joyful expression sprints across a grassy field toward a man standing with outstretched arms, capturing the bond between human and animal in a vivid, heartwarming scene. The setting is outdoors during a sunny afternoon, with soft lighting enhancing the emotional connection. Include dynamic motion in the dog’s posture and a sense of anticipation in the man’s body language. Render the image in a realistic style with attention to natural details like fur texture, grass movement, and warm tones reflecting the sunlight.', use_prompt_extend=False, prompt_extend_method='local_qwen', prompt_extend_model=None, prompt_extend_target_lang='zh', base_seed=2154838413765297346, image=None, first_frame=None, last_frame=None, sample_solver='unipc', sample_steps=50, sample_shift=16, sample_guide_scale=6)
+[2025-11-22 16:50:55,216] INFO: Generation model config: {'__name__': 'Config: Wan FLF2V 14B', 't5_model': 'umt5_xxl', 't5_dtype': torch.bfloat16, 'text_len': 512, 'param_dtype': torch.bfloat16, 'num_train_timesteps': 1000, 'sample_fps': 16, 'sample_neg_prompt': '镜头切换，镜头晃动，色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走', 't5_checkpoint': 'models_t5_umt5-xxl-enc-bf16.pth', 't5_tokenizer': 'google/umt5-xxl', 'clip_model': 'clip_xlm_roberta_vit_h_14', 'clip_dtype': torch.float16, 'clip_checkpoint': 'models_clip_open-clip-xlm-roberta-large-vit-huge-14.pth', 'clip_tokenizer': 'xlm-roberta-large', 'vae_checkpoint': 'Wan2.1_VAE.pth', 'vae_stride': (4, 8, 8), 'patch_size': (1, 2, 2), 'dim': 5120, 'ffn_dim': 13824, 'freq_dim': 256, 'num_heads': 40, 'num_layers': 40, 'window_size': (-1, -1), 'qk_norm': True, 'cross_attn_norm': True, 'eps': 1e-06}
+[2025-11-22 16:50:55,216] INFO: Creating WanFLF2V pipeline.
+[2025-11-22 16:52:01,476] INFO: loading ./Wan2.1-FLF2V-14B-720P/models_t5_umt5-xxl-enc-bf16.pth
+[2025-11-22 16:52:23,913] INFO: loading ./Wan2.1-FLF2V-14B-720P/Wan2.1_VAE.pth
+[2025-11-22 16:52:24,822] INFO: loading ./Wan2.1-FLF2V-14B-720P/models_clip_open-clip-xlm-roberta-large-vit-huge-14.pth
+[2025-11-22 16:52:44,077] INFO: Creating WanModel from ./Wan2.1-FLF2V-14B-720P
+[2025-11-22 16:53:08,935] INFO: Input prompt: A medium-sized dog with a joyful expression runs across a grassy field on a sunny afternoon. Focus on the dynamic motion of the dog’s posture, capturing its energetic sprint with meticulous attention to fur texture and natural details. The scene is illuminated by soft lighting, enhancing the warm tones reflecting sunlight and creating a vivid, lifelike image.
+[2025-11-22 16:53:08,935] INFO: Input first frame: ./sample/0.png
+[2025-11-22 16:53:08,935] INFO: Input last frame: ./sample/40.png
+[2025-11-22 16:53:08,976] INFO: Generating video ...
+[2025-11-22 17:54:37,771] INFO: Saving generated video to ./sample/0_1.mp4
+[2025-11-22 17:54:41,794] INFO: Input prompt: A man stands in a grassy outdoor setting during a sunny afternoon, his arms outstretched toward a sprinting dog. Emphasize the emotional connection between human and animal through the man’s anticipatory body language and the dog’s enthusiastic approach. Render the moment in a realistic style, highlighting intricate details like grass movement, sunlight effects, and the bond shared between them.
+[2025-11-22 17:54:41,794] INFO: Input first frame: ./sample/40.png
+[2025-11-22 17:54:41,794] INFO: Input last frame: ./sample/80.png
+[2025-11-22 17:54:41,878] INFO: Generating video ...
+[2025-11-22 18:54:56,806] INFO: Saving generated video to ./sample/1_2.mp4
+[2025-11-22 18:55:00,615] INFO: Finished.
+
+[TOOL_RESPONSE] generate_flf2v
+{
+    "save_dir": "./sample"
+}[2025-11-22 18:55:03,892] INFO: ALL tokens: 930, Available tokens: 57333
+
+[TOOL_CALL] concat_videos_timewise
+{"input_dir": "./sample"}['1_2.mp4', '0_1.mp4']
+MoviePy - Building video ./sample/final_video.mp4.
+MoviePy - Writing video ./sample/final_video.mp4
+
+MoviePy - Done !
+MoviePy - video ready ./sample/final_video.mp4
+[OK] The output video has been saved to: ./sample/final_video.mp4
+
+[TOOL_RESPONSE] concat_videos_timewise
+{
+    "save_dir": "./sample"
+}[2025-11-22 18:55:12,719] INFO: ALL tokens: 960, Available tokens: 57333
+
+[ANSWER]
+### Process Summary:
+
+1. **Global Description Refinement**:
+   - Initial prompt: "A dog happily runs to a man."
+   - Refined global description: "A medium-sized dog with a joyful expression sprints across a grassy field toward a man standing with outstretched arms, capturing the bond between human and animal in a vivid, heartwarming scene. The setting is outdoors during a sunny afternoon, with soft lighting enhancing the emotional connection. Include dynamic motion in the dog’s posture and a sense of anticipation in the man’s body language. Render the image in a realistic style with attention to natural details like fur texture, grass movement, and warm tones reflecting the sunlight."
+
+2. **Global Video Generation**:
+   - Generated global video path: `./sample/global.mp4`
+   - Duration of the global video: 5 seconds
+
+3. **Frame Extraction**:
+   - Calculated number of segments: 2
+   - Frame indices extracted: [0, 40, 80]
+   - Extracted frames saved at paths: `["./sample/0.png", "./sample/40.png", "./sample/80.png"]`
+
+4. **Segment Descriptions & Segment Video Generation**:
+   - Segment descriptions:
+     1. "A medium-sized dog with a joyful expression runs across a grassy field on a sunny afternoon. Focus on the dynamic motion of the dog’s posture, capturing its energetic sprint with meticulous attention to fur texture and natural details. The scene is illuminated by soft lighting, enhancing the warm tones reflecting sunlight and creating a vivid, lifelike image."
+     2. "A man stands in a grassy outdoor setting during a sunny afternoon, his arms outstretched toward a sprinting dog. Emphasize the emotional connection between human and animal through the man’s anticipatory body language and the dog’s enthusiastic approach. Render the moment in a realistic style, highlighting intricate details like grass movement, sunlight effects, and the bond shared between them."
+   - Generated segment videos directory: `./sample`
+
+5. **Final Assembly**:
+   - Concatenated final video from the segmented videos.
+   - Final video directory: `./sample`
+
+**Final Output**: 
+- **final_video_path**: `./sample/final_video.mp4`
